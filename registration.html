@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <script>
+             function validation()
+    {
+        var name=document.forms["MyForm"]["Name"];
+        var address=document.forms["MyForm"]["Address"];
+        var email=document.forms["MyForm"]["Email"];
+        var password=document.forms["MyForm"]["Password"];
+        var phone=document.forms["MyForm"]["Phone"];
+        var language=document.forms["MyForm"]["langauge"];
+        
+            if(name.value==""){
+                alert("Please enter valid name");
+                name.focus;
+                return false;
+            }
+            if(address.value==""){
+                alert("Please enter valid address");
+                address.focus;
+                return false;
+            }
+            if(email.value==""){
+                alert("Please enter valid email");
+                email.focus;
+                return false;
+            }
+            if(password.value==""){
+                alert("Please enter valid password");
+                password.focus;
+                return false;
+            }
+            if(phone.value==""){
+                alert("Please enter valid phone number");
+                phone.focus;
+                return false;
+            }
+            if(name.value!=""&&address.value!=""&&email.value!=""&&password.value!=""&&phone.value!=""){
+                alert("Registartion successful");
+                return true;
+            }
+
+    }
+        </script>
+        <style>
+            .div1{
+                text-align: center;
+                box-shadow:0 12px 12px 0 cadetblue ;
+                background-color:cadetblue;
+
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="div1">
+            
+        <h1 style="text-align:center;color:white;">Registration Page</h1>
+        <form name="MyForm"  action="" onsubmit="return validation()"method="post">
+            <div style="color:white;font-size:20px; text-align: center;">
+            <p>Name: <input type="text" cols="70" name="Name"></p><br>
+            <p>Address: <input type="text"cols="70" name="Address"></p><br>
+            <p>E-mail: <input type="email" cols="70"name="Email"></p><br>
+            <p>Password: <input type="password" cols="70"name="Password"></p><br>
+            <p>Phone Number: <input type="text" cols="70"name="Phone"></p><br>
+            <p>Select your language
+                <select type="text" value=""cols="70" name="language">
+                    <option>English</option>
+                    <option>Hindi</option>
+                    <option>Tamil</option>
+                    <option>Malyalam</option>
+                    <option>Telugu</option>
+                    <option>Others</option>
+                </select>
+            </p><br><br>
+            <p><input type="submit" cols="70"value="SUBMIT" name="submit"></p>
+        </div>
+        </form>
+    </div>
+    </body>
+</html>
